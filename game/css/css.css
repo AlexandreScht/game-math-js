@@ -124,7 +124,7 @@ p#afficheT{
 /* définition de la div en haut à gauche pour le MAX */
 div#VMNB{
     position: fixed;
-    width: 20.5%;
+    width: 18%;
     font-size: 1.35rem;
     color: beige;
     font-family: 'Lobster Two', cursive;
@@ -142,6 +142,6 @@ span#nb_max{
     color: beige;
     font-size: 1rem;
     position: relative;
-    top: -10px;
+    top: -15px;
     left: 11.5%;
 }
