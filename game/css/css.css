@@ -1,6 +1,8 @@
 body {
     background-color: #1e2336;
 }
+
+/* définition des nombres aléatoire*/
 span{
     color: aliceblue;
     font-size: 2rem;
@@ -8,6 +10,8 @@ span{
     margin-left: 1%;
     font-family: 'Dancing Script', cursive;
 }
+
+/* centrage des nombres aléatoire*/
 div#app{
     width: fit-content;
     height: content-box;
@@ -15,6 +19,8 @@ div#app{
     margin-left: auto;
     margin-right: auto;
 }
+
+/* titre mathematic game*/
 h1{
     display: flex;
     justify-content: center;
@@ -22,6 +28,7 @@ h1{
     margin-bottom: 2%;
 }
 
+/* input des nombres aléatoire*/
 input{
     border-radius: 15px/15px;
     -webkit-border-radius: 15px/15px;
@@ -29,10 +36,12 @@ input{
     -ms-border-radius: 15px/15px;
     -o-border-radius: 15px/15px;
     font-size: 2rem;
-    margin-left: 5%;
+    margin-left: 3%;
     width: 30%;
     margin-top: 2.5%;
 }
+
+/* décalage des premiers nombres aléatoire (ceux de gauche)*/
 span.ft{
     margin-left: 20%;
 }
@@ -54,12 +63,18 @@ button{
     font-size: 1.5rem;
     background-color: gray;
 }
+
+/* définition des signe operatoire aléatoire*/
 .sign{
     color: orange;
 }
+
+/* définition des signe = */
 .tp{
     color: violet;
 }
+
+/* définition des resultats des calculs */
 #result{
     color: #e64107;
     margin-top: 3rem;
@@ -67,6 +82,8 @@ button{
     justify-content: center;
     font-size: 3rem;
 }
+
+/* définition de la div en haut à droite pour le timer */
 div#timeS{
     position: fixed;
     top: 0;
@@ -78,22 +95,15 @@ div#timeS{
     color: beige;
     font-family: 'Lobster Two', cursive;
 }
+
+/* définition du bouton lancer le jeux */
 button#bfg{
     width: 12rem;
     margin-right: 2rem;
     color: white;
 }
 
-button#bfgs{
-    width: 12rem;
-    margin-right: 2rem;
-    color: white;
-
-}
-div#test{
-    position: relative;
-    background-color: #e64107;
-}
+/* définition du text représentant temp qui découle */
 p#afficheT{
     position: fixed;
     top: 0;
@@ -104,7 +114,25 @@ p#afficheT{
     color: beige;
     font-family: 'Lobster Two', cursive;
 }
+
+/* définition du boutton relancer une nouvelle série */
 .relanc{
     margin-bottom: 1.5rem;
     margin-top: 5rem;
+}
+
+/* définition de la div en haut à gauche pour le MAX */
+div#VMNB{
+    position: fixed;
+    width: 20.5%;
+    font-size: 1.35rem;
+    color: beige;
+    font-family: 'Lobster Two', cursive;
+    top: 0;
+    left: 3%;
+}
+
+/* définition de l'input de la div en haut à gauche pour le MAX */
+input#ValeurM{
+    margin-right: 0.6rem;
 }
