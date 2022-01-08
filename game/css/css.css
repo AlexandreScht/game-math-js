@@ -136,3 +136,12 @@ div#VMNB{
 input#ValeurM{
     margin-right: 0.6rem;
 }
+
+/* définition du span 2-999 en haut a gauche */
+span#nb_max{
+    color: beige;
+    font-size: 1rem;
+    position: relative;
+    top: -10px;
+    left: 11.5%;
+}
