@@ -7,9 +7,10 @@ let sums = [];
 let points = 0;
 let nbs_question = 0;
 const num_ops = 10;
+let max = 11;
 
 
-
+// Début 1ére fonction à apparaitre
 function before_game() {
   let div = $("<div></div>");
   div.html(
@@ -17,11 +18,12 @@ function before_game() {
     <button id="bfg" onclick="start_game()">Lancer le jeux</button>
     `
   );
-
   app.append(div);
   timer_initi();
 }
+//Fin 1ére fonction à apparaitre
 
+// Début fonction pour le timer en haut à droite
 function Timer() {
   let timeS = document.getElementById("timerS").value;
   if (timeS > 0){
@@ -38,7 +40,9 @@ function Timer() {
   document.getElementById("afficheT").innerHTML = "";
 }
 }
+//Fin fonction pour le timer en haut à droite
 
+// Début 2ème fonction à apparaitre
 function start_game() {
   Timer();
   document.getElementById("timeS").style.display = "none";
@@ -54,10 +58,20 @@ function start_game() {
   btn.click(check);
   app.append(btn);
 }
+//Fin 2ème fonction à apparaitre
 
+// Début fonction qui définit les nombres aléatoire à afficher
 function create_operation() {
-  let operand1 = random(1,11);
-  let operand2 = random(1,11);
+  // definir le nombre max par l'utilisateur (de base max=11)
+  let MaxS = document.getElementById("ValeurM").value;
+  if (MaxS > 1 && MaxS != max){
+    max = MaxS;
+    max++;
+  }
+  
+  //définition des nombre est symbole aléatoire
+  let operand1 = random(1,max);
+  let operand2 = random(1,max);
   let opera = randome(1,5);
   let sum = parseInt(eval(operand1 + opera + operand2));
   //let sum = parseFloat(eval(operand1 + opera + operand2)).toFixed(2);
@@ -75,7 +89,9 @@ function create_operation() {
 
   app.append(div);
 }
+//Fin fonction qui définit les nombres aléatoire à afficher
 
+// Début fonction qui verifie le resultat
 function check() {
   let points = 0;
   clearInterval(intervalId);
@@ -112,16 +128,17 @@ function check() {
   relanc.click(start_game);
   app.append(relanc);
 }
+//Fin fonction qui verifie le resultat
 
-// retourne un entier aléatoire compris entre min et max
+// Début des fonctions qui initialise l'aléatoire
+// function pour les nombres aléatoire
 function random(min, max) {
   return Math.floor(Math.random() * (max-min)) + min;
 }
-
-
+// function pour les signe aléatoire
 function randome(min, max){
-  let test = Math.floor(Math.random() * (max-min)) + min;
-  switch(test){
+  let sopa = Math.floor(Math.random() * (max-min)) + min;
+  switch(sopa){
     case 1:
       return "+";
       break;
@@ -136,8 +153,9 @@ function randome(min, max){
       break;
   }
 }
-// Initialisation du timer
+//Fin des fonctions qui initialise l'aléatoire
 
+// Initialisation du timer
 function timer_initi() {
   intervalId = setInterval(function () {
     console.log("initialisation timer éffectuer");
