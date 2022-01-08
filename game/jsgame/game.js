@@ -64,7 +64,7 @@ function start_game() {
 function create_operation() {
   // definir le nombre max par l'utilisateur (de base max=11)
   let MaxS = document.getElementById("ValeurM").value;
-  if (MaxS > 1 && MaxS != max){
+  if (MaxS > 1 && MaxS != max && MaxS <= 999){
     max = MaxS;
     max++;
   }
