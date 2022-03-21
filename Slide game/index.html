@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css.css">
+    <title>Document</title>
+</head>
+<body>
+    <div id="menu">
+        <span>Nombre de Colones</span>
+        <div class="sdl">
+            <input type="range" min="7" max="42" id="sliderCol">
+            <div class="bgslide"></div>
+            <div class="SizeSlide">
+            <div id="selectorCol" class="selectorSlide">
+                <div class="ValuSelcted" id="RangeValCol"></div>
+            </div>
+            </div>
+            <div id="progressbar1" class="progressbar"></div>
+        </div>
+        <span>Nombre de Lignes</span>
+        <div class="sdl">
+            <input type="range" min="5" max="30" id="sliderRow">
+            <div class="bgslide"></div>
+            <div class="SizeSlide">
+            <div id="selectorRow" class="selectorSlide">
+                <div class="ValuSelcted" id="RangeValRow"></div>
+            </div>
+            </div>
+            <div id="progressbar2" class="progressbar"></div>
+        </div>
+        <div class="button">
+        <div id="Restart" class="Buton" onclick="restart();">Restart</div>
+        <div id="Respawn" class="Buton" onclick="respawn();">Respawn</div>
+    </div>
+    <span id="clue">Appuie sur espace pour voir le chemin</span>
+    </div>
+    <div id="WidthMesure"></div>
+    <div id="square"></div>
+    <div class="blur"></div>
+    <div id="endscreen"></div>
+    <script src="js.js"></script>
+</body>
+</html>
